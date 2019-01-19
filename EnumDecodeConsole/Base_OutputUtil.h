@@ -7,8 +7,8 @@
 using std::string;
 using std::unordered_map;
 
-typedef string enum_class_name;
-typedef const string(*pfnEnumDecode)(const int idx);
+using enum_class_name = char*;
+using pfnEnumDecode = const string (*)(const int);
 typedef unordered_map<enum_class_name, pfnEnumDecode> enum_decode_map;
 
 class CBase_OutputUtil {
@@ -22,7 +22,7 @@ public:
 	DWORD m_dxData[MAX_DST]{}; // This represents the message data that would be passed to a CVerxxxxxx_GML_OutputUtil instance from a function handler.
 	char		m_szMsgData[MAX_DST]{};							// Main work string
 	char		m_szWorkStr[MAX_TMP]{};							// Secondary work string
-    const string DecodeEnum(const enum_class_name enumClassName, const int idx);
+    const string DecodeEnum(enum_class_name enumClassName, int idx);
 
-    void decode_enum(char * dst, const char * fmt, enum_class_name enumClassName, const u32_t idx, char * tmp);
+    void decode_enum(char * dst, const char * fmt, enum_class_name enumClassName, u32_t idx, char * tmp);
 };

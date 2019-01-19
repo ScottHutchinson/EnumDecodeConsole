@@ -2020,7 +2020,7 @@ namespace v57 {
        Code Analysis Warning C6262: Function uses '51660' bytes of stack:  exceeds /analyze:stacksize '16384'.
        See example at https://stackoverflow.com/a/41354501/5652483
     */
-    std::pair<enum_class_name, pfnEnumDecode> g_decodeFunctions[] = {
+    std::pair<enum_class_name, pfnEnumDecode> g_decodeFunctions[] {
         { "ACTIVATION_TYPE0", nullptr },
         { "ACTIVATION_TYPE1", nullptr },
         { "ACTIVATION_TYPE2", nullptr },
@@ -4023,7 +4023,7 @@ namespace v57 {
         { "ACTIVATION_TYPE1999", nullptr }
     };
 
-    enum_decode_map const g_decodeMap{ std::cbegin(g_decodeFunctions), std::cend(g_decodeFunctions) };
+    //enum_decode_map const g_decodeMap{ std::cbegin(g_decodeFunctions), std::cend(g_decodeFunctions) };
 
     // function-address map initializer
     //void initEnumDecodeMap(enum_decode_map& decodeMap) {

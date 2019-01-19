@@ -12,7 +12,7 @@ const string CBase_OutputUtil::DecodeEnum(const enum_class_name enumClassName, c
     {
         // handle decode function not found for the specified enumClassName value.
         CString notFoundMsg;
-        notFoundMsg.Format("%d (Decode not found for %s)", idx, enumClassName.c_str());
+        notFoundMsg.Format("%d (Decode not found for %s)", idx, enumClassName); // .c_str());
         //CNGDARTBaseDoc::AddLogEntryToQueue(notFoundMsg.GetString(), LogEntryType::Trace);
         ret = notFoundMsg.GetString();
     }
