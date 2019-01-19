@@ -5,7 +5,7 @@
 // the name of an enum class, then calls the decode function for the 
 // specified index (idx) and returns the string representation of the
 // enumerator.
-const string CBase_OutputUtil::DecodeEnum(const enum_class_name enumClassName, const int idx) {
+const string CBase_OutputUtil::DecodeEnum(enum_class_name enumClassName, const int idx) {
     string ret;
     const auto found = m_enumDecodeMap.find(enumClassName);
     if (found == m_enumDecodeMap.end())
