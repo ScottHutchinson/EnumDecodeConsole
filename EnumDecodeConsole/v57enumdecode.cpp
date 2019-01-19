@@ -22034,7 +22034,7 @@ namespace v57 {
        Code Analysis Warning C6262: Function uses '51660' bytes of stack:  exceeds /analyze:stacksize '16384'.
        See example at https://stackoverflow.com/a/41354501/5652483
     */
-    std::pair<enum_class_name, pfnEnumDecode> g_decodeFunctions[] = {
+    constexpr std::pair<enum_class_name, pfnEnumDecode> g_decodeFunctions[] = {
         { "ACTIVATION_TYPE0", &sDecode_ACTIVATION_TYPE0 },
         { "ACTIVATION_TYPE1", &sDecode_ACTIVATION_TYPE1 },
         { "ACTIVATION_TYPE2", &sDecode_ACTIVATION_TYPE2 },
