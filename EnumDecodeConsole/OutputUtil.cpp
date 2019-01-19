@@ -4,7 +4,7 @@
 #include "v57struct.h"
 
 OutputUtil::OutputUtil() {
-    v57::initEnumDecodeMap(m_enumDecodeMap);
+    //v57::initEnumDecodeMap(m_enumDecodeMap);
 }
 
 void OutputUtil::CreateOutput46(void* arg) {

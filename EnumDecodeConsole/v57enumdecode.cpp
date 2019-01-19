@@ -4023,11 +4023,11 @@ namespace v57 {
         { "ACTIVATION_TYPE1999", nullptr }
     };
 
-    enum_decode_map const g_decodeMap(std::begin(g_decodeFunctions), std::end(g_decodeFunctions));
+    enum_decode_map const g_decodeMap{ std::cbegin(g_decodeFunctions), std::cend(g_decodeFunctions) };
 
     // function-address map initializer
-    void initEnumDecodeMap(enum_decode_map& decodeMap) {
-        decodeMap = g_decodeMap;
-    }
+    //void initEnumDecodeMap(enum_decode_map& decodeMap) {
+    //    decodeMap = g_decodeMap;
+    //}
 
 }; // namespace v57

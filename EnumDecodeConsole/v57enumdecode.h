@@ -3,6 +3,6 @@
 
 namespace v57 {
 
-    void initEnumDecodeMap(enum_decode_map& decodeMap);
+    //void initEnumDecodeMap(enum_decode_map& decodeMap);
 
 } // namespace v57
