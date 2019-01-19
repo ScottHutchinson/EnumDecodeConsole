@@ -8,8 +8,8 @@ using std::string;
 using std::unordered_map;
 
 using enum_class_name = const char*;
-typedef const string(*pfnEnumDecode)(const int idx);
-typedef unordered_map<enum_class_name, pfnEnumDecode> enum_decode_map;
+using pfnEnumDecode = const string(*)(const int);
+using enum_decode_map = unordered_map<enum_class_name, pfnEnumDecode>;
 
 class CBase_OutputUtil {
 public:
