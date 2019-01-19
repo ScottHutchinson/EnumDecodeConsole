@@ -7,7 +7,7 @@
 using std::string;
 using std::unordered_map;
 
-typedef string enum_class_name;
+using enum_class_name = char*;
 typedef const string(*pfnEnumDecode)(const int idx);
 typedef unordered_map<enum_class_name, pfnEnumDecode> enum_decode_map;
 
